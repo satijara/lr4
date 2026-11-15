@@ -208,7 +208,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 
     .content, .sidebar { display: contents; }
 
-    /* Прив'язка основних секцій */
     .about { grid-area: about; }
     .works { grid-area: works; }
     #characters { grid-area: characters; }
@@ -217,7 +216,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
     #request { grid-area: request; }
     .contacts { grid-area: contacts; }
 
-    /* Прив'язка секцій бічної панелі */
     .sidebar-gallery { grid-area: gallery; }
     .sidebar-bio:not(.sidebar-process) { grid-area: bio; }
     .sidebar-faq { grid-area: faq; }
