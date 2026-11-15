@@ -196,11 +196,19 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
     .about, .contacts { padding: 1.5rem; }
     .about-top { grid-template-columns: 1fr; gap: 1rem; }
     .about-avatar { max-width: 12rem; margin: auto; }
-    .sidebar { padding: 1.25rem .9rem; }
-    .sidebar h2 { font-size: 1.7rem; }
-    .about p, .sidebar-bio p { font-size: 1.3rem; }
+    .about p { font-size: 1.3rem; }
     .process-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .contact-grid { grid-template-columns: 1fr; gap: 1rem; }
+
+    .sidebar { padding: 1.5rem 1rem; }
+    .sidebar h2 { font-size: 1.5rem; }
+    .sidebar p, .sidebar-bio p { font-size: 1.125rem; line-height: 1.3; }
+    .sidebar summary { font-size: 1.125rem; }
+    .sidebar-link { font-size: 1.125rem; }
+    .sidebar-faq { margin-top: 3rem; }
+    .sidebar-process { margin-top: 2rem; }
+    .sidebar-bottom { padding-top: 2rem; }
+
     .social-links { gap: .5rem; }
 }
 
@@ -215,18 +223,28 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
     .about, .contacts { padding: 1.5rem 1.25rem; }
     .about-top { grid-template-columns: 1fr; gap: 1rem; }
     .about-avatar { max-width: 13rem; margin: auto; }
-    .about p, .sidebar-bio p { font-size: 1.3rem; line-height: 1.2; }
-    .works { padding: 1rem .75rem; }
+    .about p { font-size: 1.3rem; line-height: 1.2; }
+    .works { padding: 1rem .75rem; margin-top: 0; }
     .works-grid { gap: .5rem; }
     .work figcaption { font-size: 1rem; padding: .3rem; }
     .process-list, .request-form, .contact-grid, .tab-panel { grid-template-columns: minmax(0, 1fr); }
     .tabs label { font-size: 1.1rem; }
     .tab-panel img { max-height: 20rem; }
+    .contacts { margin-top: 0; }
     .contacts h2 { margin-bottom: 1.5rem; }
     .contact-grid { gap: 1rem; }
     .contact-grid h3 { margin-bottom: .5rem; }
-    .sidebar { padding: 1.75rem 1.25rem; }
+
+    .sidebar { padding: 1.5rem; }
+    .sidebar h2 { font-size: 1.75rem; }
+    .sidebar p { font-size: 1.25rem; line-height: 1.3; }
+    .sidebar-bio p { font-size: 1.25rem; line-height: 1.3; }
+    .sidebar summary { font-size: 1.25rem; }
+    .sidebar-link { font-size: 1.25rem; }
+    .sidebar-faq, .sidebar-process { margin-top: 2rem; }
+    .sidebar-bottom { margin-top: 2rem; padding-top: 1rem; }
     .featured { max-width: 22rem; }
+
     .social-links { grid-template-columns: 1fr; }
 }
 
