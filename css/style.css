@@ -191,25 +191,68 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 @media (min-width: 768px) and (max-width: 1023px) {
     .header h1 { font-size: 2.8rem; }
     .menu { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .columns { grid-template-columns: minmax(0, 7fr) minmax(0, 3fr); }
-    .content { gap: 2.5rem; }
-    .about, .contacts { padding: 1.5rem; }
+
+    .columns {
+        display: grid;
+        grid-template-columns: minmax(0, 7fr) minmax(0, 3fr);
+        grid-template-areas:
+            "about       gallery"
+            "works       bio"
+            "characters  faq"
+            "process     story"
+            "techniques  story"
+            "request     story"
+            "contacts    bottom";
+        background: linear-gradient(to right, var(--dark) 70%, var(--sage) 70%);
+    }
+
+    .content, .sidebar { display: contents; }
+
+    /* Прив'язка основних секцій */
+    .about { grid-area: about; }
+    .works { grid-area: works; }
+    #characters { grid-area: characters; }
+    #process { grid-area: process; }
+    #techniques { grid-area: techniques; }
+    #request { grid-area: request; }
+    .contacts { grid-area: contacts; }
+
+    /* Прив'язка секцій бічної панелі */
+    .sidebar-gallery { grid-area: gallery; }
+    .sidebar-bio:not(.sidebar-process) { grid-area: bio; }
+    .sidebar-faq { grid-area: faq; }
+    .sidebar-process { grid-area: story; }
+    .sidebar-bottom { grid-area: bottom; }
+
+    .content > section { padding: 1.5rem; margin: 0; min-width: 0; background: var(--dark); }
+    h2 { font-size: 1.9rem; }
     .about-top { grid-template-columns: 1fr; gap: 1rem; }
     .about-avatar { max-width: 12rem; margin: auto; }
     .about p { font-size: 1.3rem; }
     .process-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .contact-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .extra p { font-size: 1.2rem; }
+    .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); }
 
-    .sidebar { padding: 1.5rem 1rem; }
-    .sidebar h2 { font-size: 1.5rem; }
-    .sidebar p, .sidebar-bio p { font-size: 1.125rem; line-height: 1.3; }
-    .sidebar summary { font-size: 1.125rem; }
-    .sidebar-link { font-size: 1.125rem; }
-    .sidebar-faq { margin-top: 3rem; }
-    .sidebar-process { margin-top: 2rem; }
-    .sidebar-bottom { padding-top: 2rem; }
+    .sidebar > section { background: var(--sage); padding: 1.5rem 1rem; margin: 0; min-width: 0; }
+    .sidebar h2 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 1rem; }
+    .sidebar p, .sidebar-bio p, .sidebar-faq p { font-size: 1.1rem; line-height: 1.3; }
+    .sidebar-bio p { margin-bottom: 1rem; }
+    .sidebar-avatar { width: min(45%, 7rem); }
+    .sidebar summary { font-size: 1.1rem; line-height: 1.2; }
+    .sidebar-link { font-size: 1.1rem; margin-bottom: 0; }
+    .featured { width: 100%; }
+    .sidebar-bottom img { width: min(75%, 15rem); }
+
+    .sidebar-gallery { align-self: start; }
+    .sidebar-bio { align-self: start; }
+    .sidebar-faq { align-self: start; }
+    .sidebar-process { align-self: start; }
+    .sidebar-bottom { align-self: start; }
 
     .social-links { gap: .5rem; }
+    .social-links a { font-size: 1rem; }
+    .social-icon { width: 2rem; }
 }
 
 @media (max-width: 767px) {
